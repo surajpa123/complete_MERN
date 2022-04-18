@@ -104,7 +104,7 @@ data?.map((e,i)=> {
  
    </div>
 
-   <button onClick={()=>{incre(-1)}}>Prev</button>
+<button onClick={()=>{incre(-1)}}>Prev</button>
  <button onClick={()=>{incre(1)}}>Next</button>
  {/* <button onClick={sortCountry} >Filter By Country</button>
  <button onClick={SortPopu}>Sort by Population</button> */}

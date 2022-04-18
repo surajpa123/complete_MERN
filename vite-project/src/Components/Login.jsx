@@ -15,13 +15,10 @@ export const Login = ()=>{
     const [email,setEmail] = useState("");
     const [token,setToken] = useState(false)
     const [password,setPassword] = useState("")
-
     const useAuth = useSelector((store)=>
         store.isAuth
     )
 
-
-    
     console.log("Auth",useAuth)
 
     // const navi = useNavigate()
@@ -43,15 +40,10 @@ export const Login = ()=>{
             console.log("tokem2",token)
           console.log("Token ",res.data.token)
             // <Navigate to ="/product"></Navigate>
-
-        
-
         }).then(function(res){
             dispatch(change_sucess(token));
             dispatch(change_token(res.data.Token))
         })
-        
-        
     }
     React.useEffect(()=>{
         if(token == true){

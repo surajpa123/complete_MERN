@@ -11,8 +11,6 @@ export default function Add_Teachers() {
     const [name,setName] = useState()
     const [gender,setGender] = useState()
     const [age,setAge] = useState()
-
-
     const token1 = useSelector((store)=>
     store.isAuth
 )
@@ -37,13 +35,12 @@ React.useEffect(()=>{
         alert("Added Sucessfully")
     })
   }
-
   return (
     <div><h1>Add new teacher</h1>
     <input type="text" placeholder='Name' onChange={(e)=>{setName(e.target.value)}}/>
     <input type="text" placeholder='Gender' onChange={(e)=>{setGender(e.target.value)}}/>
     <input type="text" placeholder='age' onChange={(e)=>{setAge(e.target.value)}}/>
     <button type="button" class="btn btn-success" onClick={handelsub}>Submit</button>
-      </div>
+    </div>
   )
 }

@@ -11,6 +11,12 @@ button{
     margin-left: 10px;
 }
 
+
+.searchbox{
+    width: 25%;
+    text-align: center;
+}
+
 .maindiv > div{
 width: 100%;
 

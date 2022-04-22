@@ -5,10 +5,12 @@ import { useEffect } from "react";
 import { useDispatch ,useSelector} from "react-redux";
 import { change_email, change_password,change_token } from "../Redux/action";
 import { store } from "../Redux/Store";
+import Button from '@mui/material/Button';
 import axios from "axios"
 import {useNavigate} from "react-router-dom"
 import { change_sucess } from "../Redux/action";
 import { Navigate } from "react-router-dom";
+import TextField from '@mui/material/TextField';
 export const Login = ()=>{
     const navigate = useNavigate()
     const dispatch = useDispatch();
@@ -56,10 +58,14 @@ export const Login = ()=>{
         <div>
 
 <h1> Admin Login</h1>
-   <input type="text" placeholder="Enter Email"  onChange={(e)=>{setEmail(e.target.value)}}/>
-
-   <input type="text"  placeholder="Enter pass"  onChange={(e)=>{setPassword(e.target.value)}}/>
-   <button type="button" class="btn btn-success" onClick={handelSubmit}>Submit</button>
+<br />
+   <TextField type="text"  label="Enter email"  onChange={(e)=>{setEmail(e.target.value)}}/>
+<br />
+<br />
+   <TextField type="text"  label="Enter password"  onChange={(e)=>{setPassword(e.target.value)}}/>
+   <br />
+   <br />
+   <Button type="button" class="btn btn-success" onClick={handelSubmit}>Login</Button>
         </div>
     )
 }

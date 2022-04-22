@@ -5,7 +5,7 @@
   <p>password - 1234 </p>
   
   <h2>Deployed Link</h2>
-  <p>https://zingy-pasca-c8e812.netlify.app</p>
+  <p>https://whimsical-semolina-02e838.netlify.app/</p>
   
   <h3>Demo Video URL </h3>
   <p>https://drive.google.com/file/d/1FylvY67pW5zMQcZCJAUh5YgwMmFcRCQq/view?usp=sharing</p>

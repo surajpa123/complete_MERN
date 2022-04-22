@@ -3,6 +3,12 @@ import {Link} from "react-router-dom"
 import style from "../Components/home.css"
 import { useState } from 'react'
 import axios from "axios"
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Table from '@mui/material/Table';
+
+
+
 export default function Home() {
 const [data,setData] = useState()
 const [pagina,setpage] = useState(1)
@@ -68,15 +74,30 @@ const search = ()=>{
     // console.log(data.id)
     
   return (
+    <>
+
+    
     <div className='maindiv'> 
+
+    
+
      <Link to={"/admin/login"}><h2>Admin Login</h2></Link>
+     <br/>
+     
     <div>
 
-    <input className='searchbox' type="text" onChange={(e)=>{setsearch(e.target.value)}} placeholder='Enter teacher name to search'/>
-    <button onClick={search} type="button" class="btn btn-success">Search</button>
+    <TextField    label="Enter Teacher Name" size="small"   className='searchbox' type="text" onChange={(e)=>{setsearch(e.target.value)}} />
+    <br/>
+    <br/>
+
+    <Button  onClick={search} variant="contained" color="success" height="100px">
+        Search
+      </Button>
+    {/* <button type="button" class="btn btn-success">Search</button> */}
     </div>
   <div>
-   <table>
+  
+   <Table>
        <thead>
            <tr>
                <th>id</th>
@@ -103,7 +124,7 @@ data?.map((e,i)=> {
 })
 }  
 </tbody>
-   </table>
+   </Table>
  
    </div>
  {/* <button onClick={sortCountry} >Filter By Country</button>
@@ -111,5 +132,6 @@ data?.map((e,i)=> {
  <button onClick={()=>{incre(-1)}}>Prev</button>
  <button onClick={()=>{incre(1)}}>Next</button>
     </div> 
+    </>
   )
 }

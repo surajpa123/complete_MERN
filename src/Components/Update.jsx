@@ -4,6 +4,9 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+
 export default function Update() {
     const {id} = useParams()
   console.log(id)
@@ -36,6 +39,9 @@ React.useEffect(()=>{
     axios.patch(`https://newdbwithauth.herokuapp.com/teachers/${id}`, data).then(function(res){
         console.log("Done")
         alert("Updated Sucessfully")
+       
+
+
     })
   }
 
